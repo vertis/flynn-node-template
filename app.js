@@ -1,5 +1,7 @@
 var express = require('express');
 
+var app = express.createServer(express.logger());
+
 app.configure('development', function () {
   app.use(express.logger());
   app.use(express.errorHandler({
